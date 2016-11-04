@@ -636,16 +636,7 @@ namespace Syndra
             {
                 Combo();
             }
-            else
-            {
-                if (Config.Item("Key.Harass").GetValue<KeyBind>().Active
-                    || Config.Item("Key.HarassT").GetValue<KeyBind>().Active) Harass();
 
-                var lc = Config.Item("Key.Lane").GetValue<KeyBind>().Active;
-                if (lc || Config.Item("FreezeActive").GetValue<KeyBind>().Active) Farm(lc);
-
-                if (Config.Item("Key.Jungle").GetValue<KeyBind>().Active) JungleFarm();
-            }
 
             if (Config.Item("Key.InstantQE").GetValue<KeyBind>().Active)
             {
